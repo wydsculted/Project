@@ -10,7 +10,7 @@
 -   Games
 -   Apps
 -   Proxy
--   Panic key - (New!)
+-   Panic key
 -   AI Assistant
 
 ## Keywords (ignore)
