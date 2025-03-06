@@ -1,4 +1,4 @@
-const textFilePath = '../splash.txt';
+const textFilePath = '../../splash.txt';
 
 async function displayRandomLine() {
     try {
