@@ -12,7 +12,31 @@
         <div class="stars"></div>
         <div class="content">
             <h1>Welcome to <span>Z-Kit</span></h1>
-            <p id="randomMessage">beep boop your a goober</p>
+            <p id="randomMessage"> </p>
+            <script>
+                const textFilePath = '/assets/splash.txt';
+                
+                async function displayRandomLine() {
+                    try {
+                        const response = await fetch(textFilePath);
+                        if (!response.ok) throw new Error('Failed to get splashes 3:');
+                
+                        const text = await response.text();
+                        const lines = text.split('\n').filter(line => line.trim() !== '');
+                
+                        const randline = lines[Math.floor(Math.random() * lines.length)];
+                
+                        document.getElementById('randomMessage').textContent = randline;
+                    } catch (error) {
+                        console.error(error);
+                        document.getElementById('randomMessage').textContent = 'Error randomizing splash!';
+                    }
+                }
+                
+                displayRandomLine();
+            </script>
+            
+            
             <a href="#">Explore the stars</a>
 
             <div class="home-directory">
@@ -78,7 +102,5 @@
       </a>
     </div>
   </div>
-
-  <script src="assets/js/splash.js"></script>
 </body>
 </html>
