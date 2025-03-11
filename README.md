@@ -7,24 +7,40 @@
 
 ## Features
 ├── Clean UI
+
     └── Tysm VRTZ
+    
 ├── Games
+
     ├── Roblox
+    
     └── 3kh0 Lite
+    
 ├── Apps
+
     ├── Now.GG
+    
     └── GeForce NOW
+    
 ├── Proxy
+
     └── Ultraviolet
+    
 ├── Panic key
+
     ├── Customizable key
+    
     └── Customizable website
+    
 └── AI Assistant
+
     ├── DeepSeek
+    
     └── Gemini
 
 ## Contributors
 Massive thanks to the following people for contributing to Z-Kit!
+
 <a href="https://github.com/z-kit-team/z-kit/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=z-kit-team/z-kit" />
 </a>
