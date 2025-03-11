@@ -5,6 +5,9 @@
 
 <h2 align="center"> Z-Kit is an almost fully unblockable proxy suite.</h2>
 
+> [!IMPORTANT]  
+> Z-Kit is not ready for release, the website is still in development.
+
 ## Features
 ```
 ├── Clean UI
