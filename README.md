@@ -6,37 +6,24 @@
 <h2 align="center"> Z-Kit is an almost fully unblockable proxy suite.</h2>
 
 ## Features
+```
 ├── Clean UI
-
     └── Tysm VRTZ
-    
 ├── Games
-
     ├── Roblox
-    
     └── 3kh0 Lite
-    
 ├── Apps
-
     ├── Now.GG
-    
     └── GeForce NOW
-    
 ├── Proxy
-
     └── Ultraviolet
-    
 ├── Panic key
-
     ├── Customizable key
-    
     └── Customizable website
-    
 └── AI Assistant
-
     ├── DeepSeek
-    
     └── Gemini
+```
 
 ## Contributors
 Massive thanks to the following people for contributing to Z-Kit!
