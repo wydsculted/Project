@@ -11,18 +11,18 @@
 ## Features
 ```
 ├── Clean UI
-    └── Tysm VRTZ
+│   └── Tysm VRTZ
 ├── Games
-    ├── Roblox
-    └── 3kh0 Lite
+│   ├── Roblox
+│   └── 3kh0 Lite
 ├── Apps
-    ├── Now.GG
-    └── GeForce NOW
+│   ├── Now.GG
+│   └── GeForce NOW
 ├── Proxy
-    └── Ultraviolet
+│   └── Ultraviolet
 ├── Panic key
-    ├── Customizable key
-    └── Customizable website
+│   ├── Customizable key
+│   └── Customizable website
 └── AI Assistant
     ├── DeepSeek
     └── Gemini
