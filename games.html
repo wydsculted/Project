@@ -193,14 +193,17 @@
               ${favorites.includes(game.title) ? "heart_minus" : "favorite"}
             </span>
           `;
-          tile.addEventListener("click", () => {
-            window.location.href = `game.html#${encodeURIComponent(game.title)}`;
+          tile.addEventListener("click", (e) => {
+            if (!e.target.classList.contains("favorite-btn")) {
+              window.location.href = `game.html#${encodeURIComponent(game.title)}`;
+            }
           });
           gameContainer.appendChild(tile);
         });
 
         document.querySelectorAll(".favorite-btn").forEach(btn => {
           btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent the click event from propagating to the tile
             const title = e.target.getAttribute("data-title");
             if (favorites.includes(title)) {
               favorites = favorites.filter(fav => fav !== title);
