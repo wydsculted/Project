@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Z-Kit</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
   <style>
     /* CSS goes here */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .address-bar {
+      position: fixed;
+      top: 0;
+      left: 60px;
+      right: 0;
+      height: 60px;
+      background-color: #1f1f1f;
+      /* Match sidebar color */
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2);
+      /* Subtle inner light glow */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      /* Light border on the bottom */
+    }
+
+    .address-bar .nav-item {
+      margin: 0 10px;
+      cursor: pointer;
+      /* Pointer cursor for buttons */
+    }
+
+    .iframe-container {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      right: 0;
+      bottom: 0;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
+
 <body>
   <div id="particles-js"></div>
   <div class="background">
-     <!-- HTML goes here -->
+    <!-- HTML goes here -->
   </div>
 
   <div class="sidebar">
@@ -57,15 +108,68 @@
     </div>
   </div>
 
+  <div class="address-bar">
+    <div class="nav-item">
+      <span class="material-symbols-outlined" onclick="history.back()">arrow_back</span>
+    </div>
+    <div class="nav-item">
+      <span class="material-symbols-outlined" onclick="history.forward()">arrow_forward</span>
+    </div>
+    <div class="nav-item">
+      <span class="material-symbols-outlined" onclick="location.reload()">refresh</span>
+    </div>
+    <div class="nav-item">
+      <span class="material-symbols-outlined" onclick="openDevTools()">code_blocks</span>
+    </div>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="website-viewer" src=""></iframe>
+  </div>
+
   <script>
     /* Script goes here */
+    function openDevTools() {
+      function erudaToggle() {
+        if (!document.getElementById("website-viewer")) return;
+        const erudaWindow = document.getElementById("website-viewer").contentWindow;
+        const erudaDocument = document.getElementById("website-viewer").contentDocument;
+        if (!erudaWindow || !erudaDocument) return;
+        if (erudaWindow.eruda?._isInit) {
+          erudaWindow.eruda.destroy();
+        } else {
+          let script = erudaDocument.createElement("script");
+          script.src = "https://cdn.jsdelivr.net/npm/eruda";
+          script.onload = function () {
+            if (!erudaWindow) return;
+            erudaWindow.eruda.init();
+            erudaWindow.eruda.show();
+          };
+          erudaDocument.head.appendChild(script);
+        }
+      }
+      erudaToggle();
+    }
+
+    window.addEventListener('hashchange', function () {
+      const iframe = document.getElementById('website-viewer');
+      const hash = location.hash.substring(1);
+      iframe.src = `embed.html#${hash}`;
+    });
+
+    // Load the initial URL if there's a hash
+    if (location.hash) {
+      const iframe = document.getElementById('website-viewer');
+      const hash = location.hash.substring(1);
+      iframe.src = `embed.html#${hash}`;
+    } else {
+      particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', function () {
+      console.log('particles.js loaded');
+    });
+    }
   </script>
 
   <script src="assets/js/particles.min.js"></script>
-  <script>
-    particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', function() {
-      console.log('particles.js loaded');
-    });
-  </script>
 </body>
+
 </html>
