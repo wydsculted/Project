@@ -734,5 +734,10 @@
     "link": "https://games.above.gay/blockblast",
     "imgSrc": "https://games.above.gay/!img/blockblast.png",
     "title": "Block Blast"
+  },
+  {
+    "link": "embed.html#https://webosu.online",
+    "imgSrc": "https://games.above.gay/!img/osu.png",
+    "title": "osu!"
   }
 ]
