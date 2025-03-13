@@ -127,7 +127,7 @@
       
       if (game) {
         const iframe = document.getElementById('gameIframe');
-        iframe.src = ('embed.html#' + game.link);
+        iframe.src = (game.link);
         document.getElementById('gameTitle').textContent = game.title;
         document.getElementById('floatingContainer').style.display = 'flex';
       }
