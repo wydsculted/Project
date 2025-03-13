@@ -1,7 +1,6 @@
 TYSM Nebula X!
 Your IP is: localhost
 beep boop youre a goober :3
-hi c(h)at
 Literally unblockable!
 Z-Kit on top!
 nmap -T4 -A -v localhost
@@ -23,3 +22,4 @@ Bumpscosity too high.
 This website is totally for education!
 sudo rm -rf / --no-preserve-root
 Make sure to change your panic key!
+The games were added before the proxy!
