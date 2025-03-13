@@ -16,22 +16,22 @@
     <div class="content search-page">
       <input type="text" id="search-bar" placeholder="Search with DuckDuckGo, or enter URL...">
       <div class="search-directory">
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://duckduckgo.com">
           <img src="assets/duckduckgo.png" alt="DuckDuckGo">
         </div>
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://youtube.com">
           <img src="assets/youtube.png" alt="YouTube">
         </div>
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://twitch.tv">
           <img src="assets/twitch.png" alt="">
         </div>
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://discord.com">
           <img src="assets/discord.png" alt="Discord">
         </div>
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://tiktok.com">
           <img src="assets/tiktok.png" alt="TikTok">
         </div>
-        <div class="search-tile">
+        <div class="search-tile" data-url="https://spotify.com">
           <img src="assets/spotify.png" alt="Spotify">
         </div>
       </div>
@@ -84,6 +84,8 @@
     });
   </script>
 
+  <script src="assets/js/search.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const searchBar = document.getElementById('search-bar');
@@ -97,6 +99,23 @@
       searchBar.addEventListener('blur', function() {
         searchBar.classList.remove('active');
         searchDirectory.classList.remove('hidden');
+      });
+
+      document.addEventListener('keypress', function(event) {
+        if (document.activeElement === searchBar && event.key === 'Enter') {
+          const query = searchBar.value.trim();
+          if (query) {
+            const url = search(query, 'https://duckduckgo.com/?q=%s');
+            window.location.href = `web.html#${url}`;
+          }
+        }
+      });
+
+      document.querySelectorAll('.search-tile').forEach(tile => {
+        tile.addEventListener('click', function() {
+          const url = this.getAttribute('data-url');
+          window.location.href = `web.html#${url}`;
+        });
       });
     });
   </script>
