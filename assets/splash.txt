@@ -9,6 +9,7 @@ Also try Geometry Dash!
 Also try Just Shapes and Beats!
 Also try Beatblock!
 Also try osu!
+Also try Scott the Woz!
 conputer
 -. . .-. -.. / .-.. -- .- ---
 I feel so sigma!
@@ -24,3 +25,4 @@ sudo rm -rf / --no-preserve-root
 Make sure to change your panic key!
 DROP PROD;
 help its been three days how do i exit vim
+Do ya smell it?
