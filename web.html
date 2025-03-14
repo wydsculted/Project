@@ -11,7 +11,6 @@
   <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
   <style>
-    /* CSS goes here */
     .sidebar {
       position: fixed;
       top: 0;
@@ -44,7 +43,13 @@
     .address-bar .nav-item {
       margin: 0 10px;
       cursor: pointer;
+      color: #aaa;
+      transition: all 0.2s ease;
       /* Pointer cursor for buttons */
+    }
+
+    .address-bar .nav-item:hover {
+      color: #fff;
     }
 
     .iframe-container {
@@ -65,9 +70,7 @@
 
 <body>
   <div id="particles-js"></div>
-  <div class="background">
-    <!-- HTML goes here -->
-  </div>
+  <div class="background"></div>
 
   <div class="sidebar">
     <div class="logo-container">
@@ -101,11 +104,11 @@
         <span class="material-symbols-outlined">info</span>
       </a>
     </div>
-    <div class="nav-item">
+    <!-- <div class="nav-item">
       <a href="settings.html">
         <span class="material-symbols-outlined">settings</span>
       </a>
-    </div>
+    </div> -->
   </div>
 
   <div class="address-bar">
@@ -128,7 +131,7 @@
   </div>
 
   <script>
-    /* Script goes here */
+
     function openDevTools() {
       function erudaToggle() {
         if (!document.getElementById("website-viewer")) return;
@@ -157,19 +160,11 @@
       iframe.src = `embed.html#${hash}`;
     });
 
-    // Load the initial URL if there's a hash
     if (location.hash) {
       const iframe = document.getElementById('website-viewer');
       const hash = location.hash.substring(1);
       iframe.src = `embed.html#${hash}`;
-    } else {
-      particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', function () {
-      console.log('particles.js loaded');
-    });
     }
   </script>
-
-  <script src="assets/js/particles.min.js"></script>
 </body>
-
 </html>

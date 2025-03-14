@@ -38,7 +38,10 @@ registerSW()
 "use strict";
 
 const embedDirectly = [
-  "now.gg.zkit.above.gay"
+  "now.gg.zkit.above.gay",
+  "extprint3r.github.io",
+  "ext-remover.net",
+  "e.widgetbot.io"
 ];
 
 const embedAlternative = {
