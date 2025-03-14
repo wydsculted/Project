@@ -739,5 +739,30 @@
     "link": "embed.html#https://webosu.online",
     "imgSrc": "https://games.above.gay/!img/osu.png",
     "title": "osu!"
+  },
+  {
+    "link": "embed.html#https://games.crazygames.com/en_ES/deadshot-io/index.html",
+    "imgSrc": "https://games.above.gay/!img/deadshot.png",
+    "title": "DEADSHOT.io"
+  },
+  {
+    "link": "embed.html#https://makeitmeme.com",
+    "imgSrc": "https://games.above.gay/!img/makeitmeme.png",
+    "title": "Make it Meme"
+  },
+  {
+    "link": "embed.html#https://selenite.cc/semag/1v1lol/index.html",
+    "imgSrc": "https://games.above.gay/!img/1v1lol.png",
+    "title": "1v1.LOL"
+  },
+  {
+    "link": "embed.html#https://openguessr.com",
+    "imgSrc": "https://games.above.gay/!img/openguessr.png",
+    "title": "OpenGuessr"
+  },
+  {
+    "link": "embed.html#https://nzp.gay",
+    "imgSrc": "https://games.above.gay/!img/nzp.png",
+    "title": "N￾zi Zombies: Portable"
   }
 ]
