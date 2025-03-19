@@ -18,14 +18,8 @@
 ├── Apps
 │   ├── Now.GG
 │   └── GeForce NOW
-├── Proxy
-│   └── Ultraviolet
-├── Panic key
-│   ├── Customizable key
-│   └── Customizable website
-└── AI Assistant
-    ├── DeepSeek
-    └── Gemini
+└── Proxy
+    └── Ultraviolet
 ```
 
 ## Contributors
