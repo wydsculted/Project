@@ -38,14 +38,14 @@ registerSW()
 "use strict";
 
 const embedDirectly = [
-  "now.gg.zkit.above.gay",
+  "securlywho.gg",
   "extprint3r.github.io",
   "ext-remover.net",
   "e.widgetbot.io"
 ];
 
 const embedAlternative = {
-  "now.gg": "https://now.gg.zkit.above.gay/hub"
+  "securlywho.gg": "https://securlywho.gg/above"
 };
 
 let destination = "";
